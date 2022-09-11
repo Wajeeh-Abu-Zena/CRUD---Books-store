@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/all.min.css">
+    <link rel="stylesheet" href="./assets/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+
+    <title>CRUD</title>
+</head>
+<body>
+    <h1 class="text-center text-info mt-4">CRUD - Books store </h1>
+        <div class="container w-75 mt-2 mb-5">
+        <div class="mb-3">
+          <label  class="form-label">Book Name</label>
+          <input type="text" class="form-control" id="bookName" aria-describedby="booklHelp">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Book Price</label>
+            <input type="number" class="form-control" id="bookPrice" aria-describedby="booklHelp">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Book Description</label>
+            <textarea class="form-control " id="bookDesc" aria-label="With textarea" style="height: 100px"></textarea>
+        </div>
+        
+        <button type="button" id="add" onclick="addBook()" class="btn btn-outline-primary ">Add Book</button>
+        <button type="button" id="clear" onclick="clearData()" class="btn btn-outline-primary">Clear</button>
+
+        </div>
+    
+
+    <div class="container w-75 mt-5">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Book Price</th>
+            <th scope="col">Book Description</th>
+            <th><input onkeyup="search(this)" class="form-control me-2" type="search" placeholder="Search"></th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
